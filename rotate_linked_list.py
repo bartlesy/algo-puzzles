@@ -45,10 +45,37 @@ def rotate_right(head, k):
     while node:
         n += 1
         node = node.next
-    k = k % n
-    return _rotate_right(head, k)
+    return _rotate_right(head, k % n)
 
 
+# this is the chop and rotate version
+def get_linked_list_len(head):
+    n = 0
+    node = head
+    while node:
+        n += 1
+        node = node.next
+    return n
+
+
+def rotate_right(head, k):
+    n = get_linked_list_len(head)
+    k_mod_n = k % n
+    i = 0
+    node = head
+    while i < (k_mod_n):
+        last_node = node
+        node = node.next
+        i += 1
+
+    new_head = node
+    last_node.next = None
+
+    while node.next:
+        node = node.next
+    node.next = head
+
+    return new_head
 
 
 
