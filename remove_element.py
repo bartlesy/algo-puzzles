@@ -78,9 +78,28 @@ class Solution:
         print(nums)
         return len(nums) - n_vals
 
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        ptr1 = 0
+        ptr2 = len(nums) - 1
+
+        while ptr1 <= ptr2:
+            if nums[ptr1] == val:
+                nums[ptr1], nums[ptr2] = nums[ptr2], nums[ptr1]
+                ptr2 -= 1
+            else:
+                ptr1 += 1
+        return ptr2 + 1
+
+
 if __name__ == '__main__':
     sln = Solution()
     print(sln.removeElement([3, 2, 2, 3], 3))
     print(sln.removeElement([0,1,2,2,3,0,4,2], 2))
     print([0, 1, 3, 0, 4])
     print(sln.removeElement([1], 1))
+    print(sln.removeElement([2], 1))
