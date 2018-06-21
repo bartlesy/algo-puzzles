@@ -18,6 +18,7 @@ def buy_sell_full(A):
     full_profit = buy_sell(A)
     return max([left_profit, right_profit, full_profit, 0])
 
+
 if __name__ == '__main__':
     tests = [
         [1, 2, 3, 4],
