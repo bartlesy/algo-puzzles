@@ -90,7 +90,7 @@ if __name__ == '__main__':
     sln = Solution()
     print(sln.carFleet(target=12, position=[10,8,0,5,3], speed=[2,4,1,1,3]))
     print(sln.carFleet(
-        target=69,
+        target=96,
         position=[2, 1, 0, 4, 1],
         speed=[6, 9, 4, 2, 1]
     ))

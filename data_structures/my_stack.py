@@ -49,7 +49,7 @@ if __name__ == '__main__':
         mq.push(x)
     print(mq)
     print(mq.pop())
-    mq.push(420)
+    mq.push(204)
     print(mq)
     print(mq.pop())
     print(mq.pop())
