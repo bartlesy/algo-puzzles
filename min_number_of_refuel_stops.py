@@ -44,6 +44,7 @@ class Solution:
         """
         if not stations:
             return 0 if target <= startFuel else -1
+        visited = [[0 for _ in stations] for __ in stations]
         T = [0 for _ in stations]
         T.append(0)
         T[0] = startFuel
@@ -56,6 +57,29 @@ class Solution:
             if x >= target:
                 return i
         return -1
+
+    def minRefuelStops(self, target, startFuel, stations):
+        """
+        :type target: int
+        :type startFuel: int
+        :type stations: List[List[int]]
+        :rtype: int
+        """
+        if not stations:
+            return 0 if target <= startFuel else -1
+        visited = [[0 for _ in stations] for __ in stations]
+        T = [0 for _ in stations]
+        T.append(0)
+        T[0] = startFuel
+        for i, (dist, capacity) in enumerate(stations):
+            for j in range(i, -1, -1):
+                if T[j] >= dist:
+                    T[j + 1] = max([T[j + 1], T[j] + capacity])
+        for i, x in enumerate(T):
+            if x >= target:
+                return i
+        return -1
+
 
 if __name__ == '__main__':
     sln = Solution()

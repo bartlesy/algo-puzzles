@@ -17,6 +17,6 @@ def get_changes(before: list, after: list):
 
 
 
-a1 = np.random.randint(low=0, high=96, size=int(1e8))
-a2 = np.random.randint(low=0, high=96, size=int(1e8))
-get_changes(a1, a2)
+a1 = np.random.randint(low=0, high=69, size=int(1e1))
+a2 = np.random.randint(low=0, high=69, size=int(1e1))
+print(get_changes(a1, a2))
