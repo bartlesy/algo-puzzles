@@ -18,3 +18,25 @@ def traverse_list(head):
         node = node.next
     return
 
+
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+def preorder_traversal(root):
+    if not root:
+        return
+    print(root.val)
+    preorder_traversal(root.left)
+    preorder_traversal(root.right)
+    return
+
+def inorder_traversal(root):
+    if not root:
+        return
+    inorder_traversal(root.left)
+    print(root.val)
+    inorder_traversal(root.right)
+    return
