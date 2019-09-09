@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/minimum-path-sum/description/
 
+
 class Solution:
     def minPathSum(self, grid):
         """
@@ -8,7 +9,7 @@ class Solution:
         """
         if not list(filter(None, grid)):
             return 0
-        T = [[float('inf') for _ in row] for row in grid]
+        T = [[float("inf") for _ in row] for row in grid]
         T[0][0] = grid[0][0]
         for i, row in enumerate(grid):
             for j, col in enumerate(row):

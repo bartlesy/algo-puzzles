@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/sqrtx/description/
 
+
 def mySqrt(x):
     if x <= 1:
         return x
@@ -18,11 +19,8 @@ def mySqrt(x):
     return int(y)
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(mySqrt(4) == 2)
     print(mySqrt(8) == 2)
     print(mySqrt(2))
     print(mySqrt(5))
-

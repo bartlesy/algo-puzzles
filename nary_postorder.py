@@ -19,6 +19,8 @@ class Node(object):
         self.val = val
         self.children = children
 """
+
+
 class Solution(object):
     def postorder(self, root):
         """
@@ -26,6 +28,7 @@ class Solution(object):
         :rtype: List[int]
         """
         out_list = []
+
         def traverse(root, out_list):
             if not root:
                 return
@@ -33,6 +36,7 @@ class Solution(object):
                 traverse(child, out_list)
             out_list.append(root.val)
             return
+
         traverse(root, out_list)
         return out_list
 
@@ -47,5 +51,3 @@ class Solution(object):
                 stack.append(child)
             visited.append(node.val)
         return visited[::-1]
-
-

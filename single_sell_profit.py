@@ -1,5 +1,6 @@
 #!/usr/bin/python3.6
 
+
 def buy_sell(A):
     if len(A) < 2:
         return 0
@@ -19,7 +20,7 @@ def buy_sell_full(A):
     return max([left_profit, right_profit, full_profit, 0])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     tests = [
         [1, 2, 3, 4],
         [4, 3, 2, 1],
@@ -28,7 +29,7 @@ if __name__ == '__main__':
         [1, 3],
         [1, 2, 3],
         [96, 0, 96, 204],
-        [0, 204, -96, 96]
+        [0, 204, -96, 96],
     ]
     for test in tests:
         print(test, buy_sell_full(test))

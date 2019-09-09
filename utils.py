@@ -25,6 +25,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 def preorder_traversal(root):
     if not root:
         return
@@ -32,6 +33,7 @@ def preorder_traversal(root):
     preorder_traversal(root.left)
     preorder_traversal(root.right)
     return
+
 
 def inorder_traversal(root):
     if not root:

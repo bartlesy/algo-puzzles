@@ -1,4 +1,3 @@
-
 def dfs(matrix, i, j, cur_num):
     for i in range(2):
         for j in range(2):
@@ -19,10 +18,4 @@ def connectedCell(matrix):
     return cur_num[0]
 
 
-
-print(connectedCell([
-    [1, 1, 0, 0],
-    [0, 1, 1, 1],
-    [0, 0, 1, 0],
-    [1, 0, 0, 0]]
-))
+print(connectedCell([[1, 1, 0, 0], [0, 1, 1, 1], [0, 0, 1, 0], [1, 0, 0, 0]]))

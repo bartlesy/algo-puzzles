@@ -1,5 +1,3 @@
-
-
 def all_subsets(nums):
     out = [[]]
     for x in nums:
@@ -9,6 +7,5 @@ def all_subsets(nums):
         out.extend(tmp)
     return out
 
+
 print(all_subsets([1, 2, 3]))
-
-

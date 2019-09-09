@@ -9,5 +9,5 @@ class Solution:
         head = TreeNode(max(nums))
         idx = nums.index(head.val)
         head.left = self.constructMaximumBinaryTree(nums[:idx])
-        head.right = self.constructMaximumBinaryTree(nums[idx + 1:])
+        head.right = self.constructMaximumBinaryTree(nums[idx + 1 :])
         return head

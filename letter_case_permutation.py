@@ -15,6 +15,7 @@
 # S will be a string with length at most 12.
 # S will consist only of letters or digits.
 
+
 class Solution:
     def letterCasePermutation(self, S):
         """
@@ -27,16 +28,11 @@ class Solution:
                 for j in range(len(paths)):
                     path = list(paths[j][:])
                     path[i] = c.upper()
-                    paths.append(''.join(path[:]))
+                    paths.append("".join(path[:]))
         return paths
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sln = Solution()
-    print(sln.letterCasePermutation('3z4'))
-    print(sln.letterCasePermutation('a1b2'))
-
-
-
-
-
+    print(sln.letterCasePermutation("3z4"))
+    print(sln.letterCasePermutation("a1b2"))

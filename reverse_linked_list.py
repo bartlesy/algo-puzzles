@@ -6,6 +6,7 @@ from utils import build_linked_list, traverse_list
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def reverseList(self, head):
         """
@@ -24,13 +25,12 @@ class Solution:
         return node
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     ex_vals = list(range(10))
     ex_ll = build_linked_list(ex_vals)
     traverse_list(ex_ll)
     print()
-    print('reversing...')
+    print("reversing...")
     print()
     sln = Solution()
     traverse_list(sln.reverseList(ex_ll))
-

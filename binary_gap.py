@@ -35,28 +35,28 @@
 # There aren't any consecutive pairs of 1's in the binary representation of 8, so we return 0.
 
 
-
 class Solution:
     def binaryGap(self, N):
         """
         :type N: int
         :rtype: int
         """
-        bin_n = str(bin(N)).split('b')[-1]
+        bin_n = str(bin(N)).split("b")[-1]
         max_dist = 0
         seen_one = False
         dist = 0
         for c in bin_n:
             if seen_one:
                 dist += 1
-            if c == '1':
+            if c == "1":
                 if seen_one:
                     max_dist = max([max_dist, dist])
                     dist = 0
                 seen_one = True
         return max_dist
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     sln = Solution()
     for x in [22, 5, 6, 8]:
         print(sln.binaryGap(x))

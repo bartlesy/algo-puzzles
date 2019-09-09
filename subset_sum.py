@@ -1,4 +1,3 @@
-
 def subset_sum(arr, tar):
     T = [[False for _ in range(tar + 1)] for __ in range(len(arr) + 1)]
 

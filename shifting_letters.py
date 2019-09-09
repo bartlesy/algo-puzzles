@@ -30,12 +30,13 @@ class Solution:
         :type shifts: List[int]
         :rtype: str
         """
-        alpha = 'abcdefghijklmnopqrstuvwxyz'
+        alpha = "abcdefghijklmnopqrstuvwxyz"
         cum_sum = 0
         tot_sum = sum(shifts)
         tot_shifts = []
         for s in shifts:
             tot_shifts.append(tot_sum - cum_sum)
             cum_sum += s
-        return ''.join([alpha[(alpha.index(c) + s) % (len(alpha))] for c, s in zip(S, tot_shifts)])
-
+        return "".join(
+            [alpha[(alpha.index(c) + s) % (len(alpha))] for c, s in zip(S, tot_shifts)]
+        )

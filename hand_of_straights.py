@@ -22,13 +22,13 @@ def build_straight(hand, W):
     straight = []
     tar_card = min(hand)
     straight.append(tar_card)
-    hand[hand.index(tar_card)] = float('inf')
+    hand[hand.index(tar_card)] = float("inf")
     while len(straight) < W:
         tar_card += 1
         if tar_card not in hand:
             return False
         straight.append(tar_card)
-        hand[hand.index(tar_card)] = float('inf')
+        hand[hand.index(tar_card)] = float("inf")
     return True
 
 
@@ -44,20 +44,20 @@ class Solution:
         if len(hand) % W:
             return False
         hand.sort()
-        while hand[-1] != float('inf'):
+        while hand[-1] != float("inf"):
             res = build_straight(hand, W)
             if not res:
                 return False
         return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sln = Solution()
     tests = [
-        ([1,2,3,6,2,3,4,7,8], 3, True),
+        ([1, 2, 3, 6, 2, 3, 4, 7, 8], 3, True),
         ([1, 2, 3, 4, 5], 4, False),
         ([1, 1, 2, 2, 3, 3], 3, True),
-        ([1, 1, 2, 2, 3, 3], 2, False)
+        ([1, 1, 2, 2, 3, 3], 2, False),
     ]
     for hand, W, res in tests:
         print(res, sln.isNStraightHand(hand, W))

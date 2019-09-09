@@ -17,7 +17,5 @@ class Solution:
             l_res = traverse(root.left, k)
             r_res = traverse(root.right, k)
             return l_res or r_res
+
         return traverse(root, k)
-
-
-

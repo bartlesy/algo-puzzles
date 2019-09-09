@@ -6,10 +6,11 @@ Output: 12.75
 Explanation: Maximum average is (12-5-6+50)/4 = 51/4 = 12.75
 """
 
+
 def findMaxAverage(nums, k):
     if not nums:
         return nums
-    T = [float('-inf') for _ in nums]
+    T = [float("-inf") for _ in nums]
     cur_sum = 0
     for i, x in enumerate(nums):
         if i < (k - 1):

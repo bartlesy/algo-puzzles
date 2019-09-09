@@ -18,7 +18,7 @@ def rec(arr, total, i):
         return 0
     if total < arr[i]:
         return rec(arr, total, i - 1)
-    return rec(arr, total, i- 1) + rec(arr, total - arr[i], i - 1)
+    return rec(arr, total, i - 1) + rec(arr, total - arr[i], i - 1)
 
 
 def count_sets_dp(arr, total):
@@ -46,6 +46,7 @@ def count_sets_dp_reuse(arr, total):
             if x <= b:
                 T[i][j] = T[i][j - x] + T[i - 1][j]
     return T[-1][-1]
+
 
 print(count_sets([2, 4, 6, 10], 16))
 print(count_sets([2, 4, 6, 10], 2))

@@ -7,7 +7,7 @@ import dash_html_components as html
 class CustomDash(dash.Dash):
     def interpolate_index(self, **kwargs):
         print(kwargs)
-        return '''
+        return """
         <!DOCTYPE html>
         <html style="background-color: blue;">
 
@@ -23,15 +23,16 @@ class CustomDash(dash.Dash):
                 <div id="custom-footer">fran footer</div>
             </body>
         </html>
-        '''.format(
-            app_entry=kwargs['app_entry'],
-            config=kwargs['config'],
-            scripts=kwargs['scripts'])
+        """.format(
+            app_entry=kwargs["app_entry"],
+            config=kwargs["config"],
+            scripts=kwargs["scripts"],
+        )
+
 
 app = CustomDash()
 
-app.layout = html.Div('Simple Dash App')
+app.layout = html.Div("Simple Dash App")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run_server(debug=True)
-

@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/merge-two-sorted-lists/description/
 
+
 def mergeTwoLists(l1, l2):
     if not l1:
         return l2
@@ -27,4 +28,3 @@ def mergeTwoLists(l1, l2):
     if l2:
         cur_node.next = l2
     return head
-

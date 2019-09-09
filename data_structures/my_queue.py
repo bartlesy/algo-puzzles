@@ -1,7 +1,7 @@
 from queue import Queue
 
-class ListNode(object):
 
+class ListNode(object):
     def __init__(self, val, next_node=None):
         self.val = val
         self.next = next_node
@@ -9,7 +9,6 @@ class ListNode(object):
 
 
 class MyQueue(object):
-
     def __init__(self, vals=[]):
         if not vals:
             self.head = None
@@ -46,7 +45,7 @@ class MyQueue(object):
         return str(out)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     mq = MyQueue()
     q = Queue()

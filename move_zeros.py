@@ -1,4 +1,3 @@
-
 def move_zeros(nums):
     zero = 0
     for i in range(len(nums)):
@@ -7,7 +6,6 @@ def move_zeros(nums):
             zero += 1
     return nums
 
+
 print(move_zeros([0, 0, 1]))
 print(move_zeros([0, 0, 1, 1, 1]))
-
-

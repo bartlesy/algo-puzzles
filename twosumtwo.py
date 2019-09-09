@@ -13,6 +13,7 @@
 # Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 #
 
+
 class Solution:
     def twoSum(self, nums, target):
         """
@@ -24,7 +25,6 @@ class Solution:
         for i, x in enumerate(nums):
             diff = target - x
             if diff in seen:
-                return  seen[diff] + 1, i + 1
+                return seen[diff] + 1, i + 1
             seen[x] = i
         return
-

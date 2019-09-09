@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def all_subsets(nums):
     """
     2^N combinations
@@ -16,5 +17,6 @@ def all_subsets(nums):
             paths.append(paths[i][:] + [x])
     return paths
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(all_subsets([1, 2]))

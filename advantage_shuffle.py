@@ -16,6 +16,7 @@ Output: [24,32,8,12]
 """
 from collections import defaultdict, Counter
 
+
 class Solution:
     def get_next_ele(self, idx_lu, target):
         min_advs = list(filter(lambda x: x > target, idx_lu))
@@ -45,14 +46,13 @@ class Solution:
         return out
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sln = Solution()
-    A = [2,7,11,15]
-    B = [1,10,4,11]
+    A = [2, 7, 11, 15]
+    B = [1, 10, 4, 11]
     print(sln.advantageCount(A, B))
     print("should be", [2, 11, 7, 15])
-    A = [2,0,4,1,2]
-    B = [1,3,0,0,2]
+    A = [2, 0, 4, 1, 2]
+    B = [1, 3, 0, 0, 2]
     print(sln.advantageCount(A, B))
-    print("should be", [2,0,2,1,4])
-
+    print("should be", [2, 0, 2, 1, 4])

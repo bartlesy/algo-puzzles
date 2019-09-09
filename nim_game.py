@@ -1,4 +1,3 @@
-
 class Solution(object):
     def canWinNim(self, n):
         """
@@ -14,7 +13,8 @@ class Solution(object):
             T[i] = T[i - 1] == False or T[i - 2] == False or T[i - 3] == False
         return T[n]
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     sln = Solution()
     for i in range(1, 11):
         print(i)

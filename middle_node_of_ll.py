@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution(object):
     def middleNode(self, head):
         """
@@ -21,6 +22,3 @@ class Solution(object):
                 middle_i += 1
                 middle = middle.next
         return middle
-
-
-

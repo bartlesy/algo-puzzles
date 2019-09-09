@@ -18,5 +18,3 @@ class Solution(object):
         if not root.children:
             return depth
         return max([self.maxDepth(child, depth + 1) for child in root.children])
-
-

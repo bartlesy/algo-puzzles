@@ -1,5 +1,6 @@
 import functools
 
+
 @functools.lru_cache()
 def fibo(n):
     if n <= 1:
@@ -18,5 +19,5 @@ def main(tar=4e6):
     return cur_sum
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(main())

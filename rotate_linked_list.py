@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/rotate-list/description/
 
+
 class ListNode(object):
     def __init__(self, val):
         self.val = val
@@ -35,6 +36,7 @@ def _rotate_right(head, k):
         last_node.next = None
         n_rots += 1
     return head
+
 
 # cheap hack to make naive solution workable
 # better method would be to just cut off the rotated list and rotate it all
@@ -78,12 +80,9 @@ def rotate_right(head, k):
     return new_head
 
 
-
 for ex_list, k in [(range(1, 6), 2), (range(3), 4)]:
     ex_head = build_linked_list(ex_list)
     traverse_list(ex_head)
     print()
     traverse_list(rotate_right(ex_head, k))
     print()
-
-

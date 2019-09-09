@@ -33,6 +33,7 @@
 # 0 <= position[i] < target
 # All initial positions are different.
 
+
 class Solution:
     def carFleet(self, target, position, speed, n_fleets=0):
         """
@@ -43,7 +44,9 @@ class Solution:
         """
         if not position:
             return 0
-        position, speed = [list(x) for x in zip(*sorted(zip(position, speed), key=lambda x: x[0]))]
+        position, speed = [
+            list(x) for x in zip(*sorted(zip(position, speed), key=lambda x: x[0]))
+        ]
 
         def _car_fleet(target, position, speed, n_fleets):
             if not position:
@@ -61,7 +64,6 @@ class Solution:
                 if position[i] == target and not fleet_add:
                     fleet_add = 1
 
-
             while position:
                 if position[-1] < target:
                     break
@@ -69,7 +71,9 @@ class Solution:
                 speed.pop()
 
             return _car_fleet(target, position, speed, n_fleets + fleet_add)
+
         return _car_fleet(target, position, speed, n_fleets)
+
 
 class Solution(object):
     def carFleet(self, target, position, speed):
@@ -82,17 +86,13 @@ class Solution(object):
             if lead < times[-1]:
                 ans += 1  # if lead arrives sooner, it can't be caught
             else:
-                times[-1] = lead # else, fleet arrives at later time 'lead'
+                times[-1] = lead  # else, fleet arrives at later time 'lead'
 
-        return ans + bool(times) # remaining car is fleet (if it exists)
+        return ans + bool(times)  # remaining car is fleet (if it exists)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     sln = Solution()
-    print(sln.carFleet(target=12, position=[10,8,0,5,3], speed=[2,4,1,1,3]))
-    print(sln.carFleet(
-        target=96,
-        position=[2, 1, 0, 4, 1],
-        speed=[6, 9, 4, 2, 1]
-    ))
-    print(sln.carFleet(10, [8,3,7,4,6,5], [4,4,4,4,4,4]))
-
+    print(sln.carFleet(target=12, position=[10, 8, 0, 5, 3], speed=[2, 4, 1, 1, 3]))
+    print(sln.carFleet(target=96, position=[2, 1, 0, 4, 1], speed=[6, 9, 4, 2, 1]))
+    print(sln.carFleet(10, [8, 3, 7, 4, 6, 5], [4, 4, 4, 4, 4, 4]))

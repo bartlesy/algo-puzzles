@@ -19,7 +19,7 @@ class Solution(object):
             c1 = s[cur_i]
             c2 = s[cur_j]
 
-            if (cur_i <= max_idxs.get(c2, float('-inf')) < cur_j):
+            if cur_i <= max_idxs.get(c2, float("-inf")) < cur_j:
                 max_len = max([max_len, cur_j - cur_i])
                 cur_i = max_idxs[c2] + 1
 
@@ -30,8 +30,8 @@ class Solution(object):
         return max_len
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sln = Solution()
-    print(sln.lengthOfLongestSubstring('aaaaa'))
-    print(sln.lengthOfLongestSubstring('abcbb'))
-    print(sln.lengthOfLongestSubstring('aaabbb'))
+    print(sln.lengthOfLongestSubstring("aaaaa"))
+    print(sln.lengthOfLongestSubstring("abcbb"))
+    print(sln.lengthOfLongestSubstring("aaabbb"))

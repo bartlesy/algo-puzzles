@@ -19,8 +19,8 @@
 # leave(4) -> null
 # seat() -> 5, the student sits at the last seat number 5.
 
-class ExamRoom:
 
+class ExamRoom:
     def __init__(self, N):
         """
         :type N: int
@@ -28,13 +28,11 @@ class ExamRoom:
         self.N = N
         self.seats = {i: None for i in range(N)}
 
-
     def seat_dist(self, seat):
         non_empties = [k for k, v in self.seats.items() if v]
         if not non_empties:
             return None
         return min([abs(seat - seat2) for seat2 in non_empties])
-
 
     def seat(self):
         """
@@ -50,7 +48,6 @@ class ExamRoom:
         self.seats[seat] = 1
         return seat
 
-
     def leave(self, p):
         """
         :type p: int
@@ -58,7 +55,6 @@ class ExamRoom:
         """
         self.seats[p] = None
         return
-
 
 
 # Your ExamRoom object will be instantiated and called as such:

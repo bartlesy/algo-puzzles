@@ -81,36 +81,46 @@ class Solution:
         return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sln = Solution()
 
     target = 100
     startFuel = 10
-    stations = [[10,60],[20,30],[30,30],[60,40]]
+    stations = [[10, 60], [20, 30], [30, 30], [60, 40]]
     print(sln.minRefuelStops(target, startFuel, stations))
     print("should be 2")
 
     target = 100
     startFuel = 1
-    stations = [[10,100]]
+    stations = [[10, 100]]
     print(sln.minRefuelStops(target, startFuel, stations))
     print("should be -1")
 
     target = 1
     startFuel = 1
-    stations = [[10,100]]
+    stations = [[10, 100]]
     print(sln.minRefuelStops(target, startFuel, stations))
     print("should be 0")
 
-
     target = 100
     startFuel = 50
-    stations = [[50,50]]
+    stations = [[50, 50]]
     print(sln.minRefuelStops(target, startFuel, stations))
     print("should be 1")
 
     target = 1000
     startFuel = 83
-    stations = [[25,27],[36,187],[140,186],[378,6],[492,202],[517,89],[579,234],[673,86],[808,53],[954,49]]
+    stations = [
+        [25, 27],
+        [36, 187],
+        [140, 186],
+        [378, 6],
+        [492, 202],
+        [517, 89],
+        [579, 234],
+        [673, 86],
+        [808, 53],
+        [954, 49],
+    ]
     print(sln.minRefuelStops(target, startFuel, stations))
     print("should be -1")

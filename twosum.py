@@ -26,8 +26,7 @@ class Solution:
         return
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sln = Solution()
     print(sln.twoSum([2, 7, 11, 15], 9))
     print(sln.twoSum([6, 3, 5, 5, 11, 15], 10))
-

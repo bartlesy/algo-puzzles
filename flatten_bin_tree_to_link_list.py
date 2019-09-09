@@ -1,4 +1,5 @@
 from utils import inorder_traversal, TreeNode
+
 # Given a binary tree, flatten it to a linked list in-place.
 #
 # For example, given the following tree:
@@ -31,6 +32,7 @@ from utils import inorder_traversal, TreeNode
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def flatten(self, root):
         """
@@ -50,7 +52,7 @@ class Solution(object):
         return
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     root = TreeNode(1)
     root.left = TreeNode(2)
     root.left.left = TreeNode(3)

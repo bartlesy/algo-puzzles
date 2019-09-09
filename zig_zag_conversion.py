@@ -48,14 +48,14 @@ class Solution:
             else:
                 out_row -= 1
 
-        return ''.join(map(''.join, out_rows))
+        return "".join(map("".join, out_rows))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     sln = Solution()
-    print(sln.convert('PAYPALISHIRING', 4))
+    print(sln.convert("PAYPALISHIRING", 4))
     print("PINALSIGYAHRPI")
-    print(sln.convert('PAYPALISHIRING', 3))
+    print(sln.convert("PAYPALISHIRING", 3))
     print("PAHNAPLSIIGYIR")
-    print(sln.convert('AB', 1))
+    print(sln.convert("AB", 1))
     print("AB")
-

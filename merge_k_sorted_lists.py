@@ -1,7 +1,8 @@
 # https://leetcode.com/problems/merge-k-sorted-lists/description/
 
+
 def get_min_element(lists):
-    cur_min = float('inf')
+    cur_min = float("inf")
     min_ele = None
     for i, x in enumerate(lists):
         if x.val < cur_min:
@@ -33,6 +34,3 @@ class Solution:
             cur_node = node
             lists = list(filter(None, lists))
         return head
-
-
-

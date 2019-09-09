@@ -1,4 +1,3 @@
-
 class Solution:
     def sum_nodes(self, root):
         if not root:
@@ -18,4 +17,3 @@ class Solution:
         left_tilt = self.findTilt(root.left)
         right_tilt = self.findTilt(root.right)
         return left_tilt + right_tilt + node_tilt
-

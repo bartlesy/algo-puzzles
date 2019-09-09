@@ -61,9 +61,9 @@ class BinHeap(object):
         return
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     bh = BinHeap()
-    bh.build_heap([9,5,6,2,3])
+    bh.build_heap([9, 5, 6, 2, 3])
     print(bh.heap_list)
     bh.insert(1)
     print(bh.heap_list)
@@ -74,4 +74,3 @@ if __name__ == '__main__':
 
     while len(bh.heap_list) > 1:
         print(bh.del_min())
-

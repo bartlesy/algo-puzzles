@@ -59,6 +59,7 @@ class Solution:
                         mountain_start = 0
         return max_len
 
+
 def find_peaks(A):
     res = []
     for i, (x, y, z) in enumerate(zip(A, A[1:-1], A[2:])):
@@ -99,20 +100,11 @@ class Solution:
         return max(map(lambda p: get_mtn_size(A, p), peaks))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sln = Solution()
 
-    test_cases = [
-        [2,1,4,7,3,2,5],
-        [2, 2, 2],
-        [0,1,2,3,4,5,4,3,2,1,0]
-    ]
+    test_cases = [[2, 1, 4, 7, 3, 2, 5], [2, 2, 2], [0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0]]
 
-
-    test_res = [
-        5,
-        0,
-        11
-    ]
+    test_res = [5, 0, 11]
     for case, res in zip(test_cases, test_res):
         print(sln.longestMountain(case), res)

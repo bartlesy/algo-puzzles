@@ -96,10 +96,10 @@ class Solution:
         return ptr2 + 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sln = Solution()
     print(sln.removeElement([3, 2, 2, 3], 3))
-    print(sln.removeElement([0,1,2,2,3,0,4,2], 2))
+    print(sln.removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2))
     print([0, 1, 3, 0, 4])
     print(sln.removeElement([1], 1))
     print(sln.removeElement([2], 1))

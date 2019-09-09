@@ -1,4 +1,3 @@
-
 def merge(nums1, m, nums2, n):
     res_set = []
     sub_list1 = nums1[:m]
