@@ -38,5 +38,8 @@ class Solution:
             tot_shifts.append(tot_sum - cum_sum)
             cum_sum += s
         return "".join(
-            [alpha[(alpha.index(c) + s) % (len(alpha))] for c, s in zip(S, tot_shifts)]
+            [
+                alpha[(alpha.index(c) + s) % (len(alpha))]
+                for c, s in zip(S, tot_shifts)
+            ]
         )

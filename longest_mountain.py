@@ -103,7 +103,11 @@ class Solution:
 if __name__ == "__main__":
     sln = Solution()
 
-    test_cases = [[2, 1, 4, 7, 3, 2, 5], [2, 2, 2], [0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0]]
+    test_cases = [
+        [2, 1, 4, 7, 3, 2, 5],
+        [2, 2, 2],
+        [0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0],
+    ]
 
     test_res = [5, 0, 11]
     for case, res in zip(test_cases, test_res):

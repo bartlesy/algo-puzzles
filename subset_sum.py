@@ -5,7 +5,9 @@ def subset_sum(arr, tar):
     for i, x in enumerate(arr):
         for sub_tar in range(tar + 1):
             if x <= sub_tar:
-                T[i + 1][sub_tar] = ((T[i][sub_tar - x]) and True) or (T[i][sub_tar])
+                T[i + 1][sub_tar] = ((T[i][sub_tar - x]) and True) or (
+                    T[i][sub_tar]
+                )
             else:
                 T[i + 1][sub_tar] = T[i][sub_tar]
 

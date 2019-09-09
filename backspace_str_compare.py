@@ -23,7 +23,10 @@ class Solution:
 
 
 if __name__ == "__main__":
-    test_cases = [({"S": "a##c", "T": "#a#c"}, True), ({"S": "a#c", "T": "b"}, False)]
+    test_cases = [
+        ({"S": "a##c", "T": "#a#c"}, True),
+        ({"S": "a#c", "T": "b"}, False),
+    ]
 
     sln = Solution()
 

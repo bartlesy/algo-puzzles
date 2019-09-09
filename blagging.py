@@ -29,7 +29,12 @@ from sklearn.externals.six.moves import zip
 from sklearn.metrics import r2_score, accuracy_score
 from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
 from sklearn.linear_model import LogisticRegression
-from sklearn.utils import check_random_state, check_X_y, check_array, column_or_1d
+from sklearn.utils import (
+    check_random_state,
+    check_X_y,
+    check_array,
+    column_or_1d,
+)
 from sklearn.utils.random import sample_without_replacement
 from sklearn.utils.validation import has_fit_parameter, check_is_fitted
 from sklearn.utils.fixes import bincount
@@ -50,7 +55,9 @@ MAX_INT = np.iinfo(np.int32).max
 # TEF: This procedure is the main change to the file.  It class-balances the
 # learning set prior to training each estimator.  Note that the sample_weight
 # parameter is not supported here.
-def _parallel_build_balanced_estimators(n_estimators, ensemble, X, y, seeds, verbose):
+def _parallel_build_balanced_estimators(
+    n_estimators, ensemble, X, y, seeds, verbose
+):
     """Private function used to build a batch of estimators within a job."""
     # Retrieve settings
     n_samples, n_features = X.shape
@@ -544,7 +551,9 @@ class BlaggingClassifier(BaseBagging, ClassifierMixin):
         predictions = np.zeros((n_samples, n_classes_))
 
         for estimator, samples, features in zip(
-            self.estimators_, self.estimators_samples_, self.estimators_features_
+            self.estimators_,
+            self.estimators_samples_,
+            self.estimators_features_,
         ):
             mask = np.ones(n_samples, dtype=np.bool)
             mask[samples] = False
@@ -570,8 +579,12 @@ class BlaggingClassifier(BaseBagging, ClassifierMixin):
                 "to compute any reliable oob estimates."
             )
 
-        oob_decision_function = predictions / predictions.sum(axis=1)[:, np.newaxis]
-        oob_score = accuracy_score(y, classes_.take(np.argmax(predictions, axis=1)))
+        oob_decision_function = (
+            predictions / predictions.sum(axis=1)[:, np.newaxis]
+        )
+        oob_score = accuracy_score(
+            y, classes_.take(np.argmax(predictions, axis=1))
+        )
 
         self.oob_decision_function_ = oob_decision_function
         self.oob_score_ = oob_score
@@ -603,7 +616,9 @@ class BlaggingClassifier(BaseBagging, ClassifierMixin):
             The predicted classes.
         """
         predicted_probabilitiy = self.predict_proba(X)
-        return self.classes_.take((np.argmax(predicted_probabilitiy, axis=1)), axis=0)
+        return self.classes_.take(
+            (np.argmax(predicted_probabilitiy, axis=1)), axis=0
+        )
 
     def predict_proba(self, X):
         """Predict class probabilities for X.
@@ -960,7 +975,9 @@ class BlaggingRegressor(BaseBagging, RegressorMixin):
         n_predictions = np.zeros((n_samples,))
 
         for estimator, samples, features in zip(
-            self.estimators_, self.estimators_samples_, self.estimators_features_
+            self.estimators_,
+            self.estimators_samples_,
+            self.estimators_features_,
         ):
             mask = np.ones(n_samples, dtype=np.bool)
             mask[samples] = False

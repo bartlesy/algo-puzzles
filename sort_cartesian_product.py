@@ -26,7 +26,9 @@ def test(returned, expected):
     else:
         prefix = "  X "
     print(
-        "{0} returned: {1} expected: {2}".format(prefix, repr(returned), repr(expected))
+        "{0} returned: {1} expected: {2}".format(
+            prefix, repr(returned), repr(expected)
+        )
     )
 
 
@@ -36,7 +38,17 @@ def main():
     print("sort_cartesian_product")
     test(
         sort_cartesian_product([1, 5, 6], [0, 3, 7]),
-        [[0, 1], [1, 3], [1, 7], [0, 5], [3, 5], [5, 7], [0, 6], [3, 6], [6, 7]],
+        [
+            [0, 1],
+            [1, 3],
+            [1, 7],
+            [0, 5],
+            [3, 5],
+            [5, 7],
+            [0, 6],
+            [3, 6],
+            [6, 7],
+        ],
     )
 
 

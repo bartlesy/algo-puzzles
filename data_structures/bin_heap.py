@@ -7,7 +7,10 @@ class BinHeap(object):
         self.current_size = 0
 
     def _swap_idx(self, i1, i2):
-        self.heap_list[i1], self.heap_list[i2] = self.heap_list[i2], self.heap_list[i1]
+        self.heap_list[i1], self.heap_list[i2] = (
+            self.heap_list[i2],
+            self.heap_list[i1],
+        )
         return
 
     def percolate(self, i):
