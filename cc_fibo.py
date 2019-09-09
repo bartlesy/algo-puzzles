@@ -20,4 +20,3 @@ def main(tar=4e6):
 
 if __name__ == '__main__':
     print(main())
-
